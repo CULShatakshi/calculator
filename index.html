@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JS Starter</title>
+  <link rel="stylesheet" href="style.css">
+  <style >
+    body{
+        background-color: rgb(215, 233, 251);
+    }
+     .container{
+        margin-right: 100px; 
+        margin-left:100px;
+        background-color:rgb(153, 194, 231);
+        padding-top:50px; 
+        padding-bottom: 50px;
+
+    }
+
+  </style>
+</head>
+
+<body>
+    <h1 class="text-center">SIMPLE INTEREST CALCULATOR</h1> 
+    <div class="container mt-30" >
+        <h3>Simple Interest</h3>
+        <p>Simple interest is a set rate on the principal originally lent to the borrower that the borrower has to pay for the ability to use the money. </p>
+        <h3>Principle</h3>
+        
+
+    </div>
+   
+    <div class="container mt-5 ">
+        
+        <input type="number" name="" id="pr">
+        <p>Principle</p>
+        <input type="number" name="" id="rate">
+        <p>Rate</p>
+        <input type="number" name="" id="time">
+        <p>Time</p>
+        <button onclick="SI()" >Calculate</button><br>
+    </div>
+
+
+
+  
+   <div class="container mt-5" style="padding-top:50;">
+    <p id="result" class="text-center" style="font-size:larger"></p>
+    <p id="amount" class="text-center" style="font-size:larger"></p>
+
+   </div>
+
+
+
+<script>
+    function SI(){
+        var p=document.getElementById("pr").value;
+        var r=document.getElementById("rate").value;
+        var t=document.getElementById("time").value;
+        simpleinterest=(Number(p)*Number(r)*Number(t))/100;
+        amt=Number(p)+simpleinterest;
+        document.getElementById("result").innerHTML="The simple interest is "+simpleinterest;
+        document.getElementById("amount").innerHTML="Amount is "+amt;
+    }
+</script>
+
+
+
+</body>
+</html>
